@@ -11,7 +11,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let task of taskList">
+        <tr *ngFor="let task of taskList let i = index">
           <td>{{task.title}}</td>
           <td>{{task.description}}</td>
           <td>{{task.duedate |date}}</td>
@@ -19,7 +19,7 @@
           <td>
             <button class="btn btn-primary" routerLink="/edit-task" (click)="editTask(task.id)">Edit</button>
             <button class="btn btn-info" routerLink="/task-details" (click)="viewTask()">View</button>
-            <button class="btn btn-danger" (click)="deleteTask()">Delete</button>
+            <button class="btn btn-danger" (click)="deleteTask(task,i)">Delete</button>
           </td>
         </tr>
       </tbody>

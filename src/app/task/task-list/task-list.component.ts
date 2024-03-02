@@ -47,7 +47,10 @@ export class TaskListComponent implements OnInit {
   viewTask(){
 
   }
-  deleteTask(){
+  deleteTask(task:any,index: number){
+    this.taskList.splice(index,1);
+    localStorage.setItem("taskList",JSON.stringify(this.taskList));
+    
 
   }
 
