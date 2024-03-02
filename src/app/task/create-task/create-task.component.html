@@ -1,0 +1,48 @@
+<div class="container mt-5">
+    <form [formGroup]="createForm" (ngSubmit)="onSubmit()" >
+      <div class="mb-3">
+        <label for="title" class="form-label">Title:</label>
+        <input type="text" class="form-control" id="title" formControlName="formcontroltitle" >
+        <!-- <div *ngIf="confirmSubmitted && createForm.controls.formcontroltitle.errors">
+            <span *ngIf="confirmSubmitted && createForm.controls.formcontroltitle.errors.required"class="text-danger">
+              Please Enter Title
+            </span>
+          </div> -->
+      </div>
+  
+      <div class="mb-3">
+        <label for="description" class="form-label">Description:</label>
+        <textarea class="form-control" id="description" formControlName="formcontroldescription"></textarea>
+        <!-- <div *ngIf="confirmSubmitted && createForm.controls.description.errors">
+            <span *ngIf="confirmSubmitted && createForm.controls.formcontroldescription.errors.required"class="text-danger">
+              Please Enter Description
+            </span>
+          </div> -->
+      </div>
+  
+      <div class="mb-3">
+        <label for="duedate" class="form-label">Due Date:</label>
+        <input type="date" class="form-control" id="duedate" formControlName="formcontrolduedate">
+        <!-- <div *ngIf="confirmSubmitted && createForm.controls.formcontrolduedate.errors">
+            <span *ngIf="confirmSubmitted && createForm.controls.formcontrolduedate.errors.required"class="text-danger">
+              Please Enter Due Date
+            </span>
+          </div> -->
+      </div>
+  
+      <div class="mb-3">
+        <label for="status" class="form-label">Status:</label>
+        <select class="form-select" id="status" formControlName="formcontrolstatus">
+          <option *ngFor="let option of statusArr" [value]="option" >{{ option }}</option>
+        </select>
+        <!-- <div *ngIf="confirmSubmitted && createForm.controls.formcontrolstatus.errors">
+            <span *ngIf="confirmSubmitted && createForm.controls.formcontrolstatus.errors.required"class="text-danger">
+              Please Select Status
+            </span>
+          </div> -->
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+

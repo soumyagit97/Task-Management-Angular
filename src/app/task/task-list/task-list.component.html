@@ -1,0 +1,27 @@
+<button class="btn btn-primary mb-3"routerLink="create-task">Add Task</button>
+<div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of taskList">
+          <td>{{task.title}}</td>
+          <td>{{task.description}}</td>
+          <td>{{task.duedate |date}}</td>
+          <td>{{task.status}}</td>
+          <td>
+            <button class="btn btn-primary" routerLink="/edit-task" (click)="editTask(task.id)">Edit</button>
+            <button class="btn btn-info" routerLink="/task-details" (click)="viewTask()">View</button>
+            <button class="btn btn-danger" (click)="deleteTask()">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

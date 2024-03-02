@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  app-header,
+  app-footer {
+    width: 100%;
+  }
+  
+  app-sidebar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sidebar {
+    width: 200px;
+    height: 100%;
+    background-color: #eee;
+  }
+  
+  .container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .content {
+    margin-left: 0; /* Adjust margin when sidebar is closed */
+    transition: margin 0.3s ease;
+  }
+  
+  .open .content {
+    margin-left: 250px; /* Adjust margin when sidebar is open */
+  }
+  
+  
