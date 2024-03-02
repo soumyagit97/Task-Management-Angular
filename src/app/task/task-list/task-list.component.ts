@@ -51,6 +51,7 @@ export class TaskListComponent implements OnInit {
     this.taskList.splice(index,1);
     localStorage.setItem("taskList",JSON.stringify(this.taskList));
     
+    
 
   }
 
