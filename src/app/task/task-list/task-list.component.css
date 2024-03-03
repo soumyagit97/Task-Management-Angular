@@ -1,0 +1,10 @@
+.button{
+    float: right;
+}
+.btn-right{
+    float: right;
+}
+.new-req-btn{
+    justify-content: flex-end;
+    
+}
