@@ -1,6 +1,11 @@
 .register {
     padding: 10px;
   }
-  .breadcrumb-item{
-    text-decoration: none !important;
+  .breadcrumb a {
+    text-decoration: none;
+  }
+  
+  .breadcrumb a:hover {
+    text-decoration: none;
+    color: #007bff;
   }

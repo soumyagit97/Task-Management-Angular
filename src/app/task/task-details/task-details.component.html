@@ -1,13 +1,14 @@
 <div class="container mt-5">
     <div>
-      <h5>Task Details</h5>
-      <hr>
-      <nav aria-label="breadcrumb" class="breadcrumb-cont">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a routerLink="">Task List</a></li>
-          <li class="breadcrumb-item">Edit Task</li>
-        </ol>
-      </nav>
+        <nav aria-label="breadcrumb" class="breadcrumb-cont mb-3">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a routerLink="">Task List</a></li>
+              <li class="breadcrumb-item">Edit Task</li>
+            </ol>
+          </nav>
+        
+          <h5>Task Details</h5>
+          <hr>
       <div>
         <label for="title" class="form-label">Title:</label>
         <input type="text" class="form-control" id="title" [value]="title" readonly>

@@ -1,14 +1,12 @@
 <div class="container mt-5">
-
-  <h5>Edit Task</h5>
-      <hr>
-
   <nav aria-label="breadcrumb" class="breadcrumb-cont">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a routerLink="">Task List</a></li>
       <li class="breadcrumb-item">Edit Task</li>
     </ol>
   </nav>
+  <h5>Edit Task</h5>
+      <hr>
     <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
       <div class="mb-3">
         <label for="title" class="form-label">Title:</label>

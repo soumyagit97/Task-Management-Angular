@@ -42,5 +42,13 @@ body {
   .open .content {
     margin-left: 250px; /* Adjust margin when sidebar is open */
   }
+  .breadcrumb a {
+    text-decoration: none;
+  }
+  
+  .breadcrumb a:hover {
+    text-decoration: none;
+    color: #007bff;
+  }
   
   
