@@ -24,9 +24,10 @@ export class CreateTaskComponent implements OnInit {
       formcontroltitle: ['', [Validators.required]],
       formcontroldescription: ['', [Validators.required]],
       formcontrolduedate: ['', [Validators.required]],
-      formcontrolstatus: ['', [Validators.required]],
+      formcontrolstatus: ['Pending', [Validators.required]],
     });
   }
+  
 
   ngOnInit(): void {
 

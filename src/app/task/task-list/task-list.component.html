@@ -23,7 +23,7 @@
           <td>{{task.title}}</td>
           <td>{{task.description}}</td>
           <td>{{task.duedate |date}}</td>
-          <td>{{task.status}}</td>
+          <td  [ngClass]="getStatusColor(task.status)">{{task.status}}</td>
           <td>
             <button class="btn btn-primary me-2" routerLink="/edit-task" (click)="editTask(task.id)">Edit</button>
             <button class="btn btn-info me-2" routerLink="/task-details" (click)="viewTask(task.id)">View</button>
