@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Task } from 'src/app/task-interface';
 import { Router } from '@angular/router';
 @Component({
@@ -53,12 +53,11 @@ export class TaskListComponent implements OnInit {
   deleteTask(task:any,index: number){
     this.taskList.splice(index,1);
     localStorage.setItem("taskList",JSON.stringify(this.taskList));
-    
-    
-
   }
+
 
   getStatusColor(status: string): string {
     return status === 'Pending' ? 'text-warning' : 'text-success';
   }
+
 }
