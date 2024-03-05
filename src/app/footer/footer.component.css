@@ -1,12 +1,19 @@
-footer {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
   background-color: #333;
   color: #fff;
   padding: 5px;
   text-align: center;
   width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
 }
 
 .content {
-  
   margin-bottom: 50px;
 }
