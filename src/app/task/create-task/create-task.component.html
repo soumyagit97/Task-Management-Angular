@@ -1,12 +1,12 @@
 <div class="container mt-5">
-    <nav aria-label="breadcrumb" class="breadcrumb-cont">
+  <nav aria-label="breadcrumb" class="breadcrumb-cont">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a routerLink="">Task List</a></li>
       <li class="breadcrumb-item">Create Task</li>
     </ol>
   </nav>
   <h5>Create Task</h5>
-   <hr>
+  <hr>
   <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
     <div class="mb-3 form-group">
       <label for="title" class="form-label">Title:</label>
@@ -21,7 +21,8 @@
 
     <div class="mb-3 form-group">
       <label for="description" class="form-label">Description:</label>
-      <textarea class="form-control" id="description" placeholder="Enter Description" formControlName="formcontroldescription"></textarea>
+      <textarea class="form-control" id="description" placeholder="Enter Description"
+        formControlName="formcontroldescription"></textarea>
 
       <div *ngIf="confirmSubmitted && createForm.controls['formcontroldescription'].hasError('required')">
         <span class="text-danger">
@@ -32,7 +33,8 @@
 
     <div class="mb-3 form-group">
       <label for="duedate" class="form-label">Due Date:</label>
-      <input type="date" class="form-control" id="duedate" placeholder="Select Date" formControlName="formcontrolduedate">
+      <input type="date" class="form-control" id="duedate" placeholder="Select Date"
+        formControlName="formcontrolduedate">
 
       <div *ngIf="confirmSubmitted && createForm.controls['formcontrolduedate'].hasError('required')">
         <span class="text-danger">
