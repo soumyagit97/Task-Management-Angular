@@ -58,5 +58,7 @@ export class TaskListComponent implements OnInit {
 
   }
 
-
+  getStatusColor(status: string): string {
+    return status === 'Pending' ? 'text-warning' : 'text-success';
+  }
 }
