@@ -1,4 +1,12 @@
 <div class="container mt-5">
+  <nav aria-label="breadcrumb" class="breadcrumb-cont">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="">Task List</a></li>
+      <li class="breadcrumb-item">Edit Task</li>
+    </ol>
+  </nav>
+  <h5>Edit Task</h5>
+      <hr>
     <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
       <div class="mb-3">
         <label for="title" class="form-label">Title:</label>
@@ -8,6 +16,11 @@
               Please Enter Title
             </span>
           </div> -->
+          <div *ngIf="confirmSubmitted && editForm.controls['formcontroltitle'].hasError('required')">
+            <span class="text-danger">
+              Please Enter Title
+            </span>
+          </div>
       </div>
   
       <div class="mb-3">
@@ -18,6 +31,11 @@
               Please Enter Description
             </span>
           </div> -->
+          <div *ngIf="confirmSubmitted && editForm.controls['formcontroldescription'].hasError('required')">
+            <span class="text-danger">
+              Please Enter Description
+            </span>
+          </div>
       </div>
   
       <div class="mb-3">
@@ -28,6 +46,11 @@
               Please Enter Due Date
             </span>
           </div> -->
+          <div *ngIf="confirmSubmitted && editForm.controls['formcontrolduedate'].hasError('required')">
+            <span class="text-danger">
+              Please Select Date
+            </span>
+          </div>
       </div>
   
       <div class="mb-3">
@@ -40,6 +63,11 @@
               Please Select Status
             </span>
           </div> -->
+          <div *ngIf="confirmSubmitted && editForm.controls['formcontrolstatus'].hasError('required')">
+            <span class="text-danger">
+              Please Select Status
+            </span>
+          </div>
       </div>
   
       <button type="submit" class="btn btn-primary" >Update</button>

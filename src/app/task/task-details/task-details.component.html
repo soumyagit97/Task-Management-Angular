@@ -1,1 +1,30 @@
-<p>task-details works!</p>
+<div class="container mt-5">
+  <div>
+    <nav aria-label="breadcrumb" class="breadcrumb-cont mb-3">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="">Task List</a></li>
+        <li class="breadcrumb-item">Edit Task</li>
+      </ol>
+    </nav>
+
+    <h5>Task Details</h5>
+    
+    <hr>
+    <div>
+      <label for="title" class="form-label">Title:</label>
+      <input type="text" class="form-control" id="title" [value]="title" readonly>
+    </div>
+    <div>
+      <label for="description" class="form-label">Description:</label>
+      <textarea class="form-control" id="description" [value]="description" readonly></textarea>
+    </div>
+    <div>
+      <label for="duedate" class="form-label">Due Date:</label>
+      <input type="text" class="form-control" id="duedate" [value]="duedate | date:'yyyy-MM-dd'" readonly>
+    </div>
+    <div>
+      <label for="status" class="form-label">Status:</label>
+      <input type="text" class="form-control" id="status" [value]="status" readonly>
+    </div>
+  </div>
+</div>

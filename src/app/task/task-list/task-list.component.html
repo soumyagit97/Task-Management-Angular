@@ -1,4 +1,12 @@
-<button class="btn btn-primary mb-3"routerLink="create-task">Add Task</button>
+<div class="card-details">
+  <div class="d-flex justify-content-between">
+    <div class="content-heading-with-button mb-0 mt-0">
+      <h5 class="mb-0">Task List</h5>
+    </div>
+    <div class="new-req-btn">
+      <button type="button" class="btn btn-outline-primary btn-align" routerLink="create-task">Add Task</button>
+    </div>
+  </div>
 <div class="table-responsive">
     <table class="table table-bordered">
       <thead>
@@ -11,17 +19,18 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let task of taskList">
+        <tr *ngFor="let task of taskList let i = index">
           <td>{{task.title}}</td>
           <td>{{task.description}}</td>
           <td>{{task.duedate |date}}</td>
           <td>{{task.status}}</td>
           <td>
-            <button class="btn btn-primary" routerLink="/edit-task" (click)="editTask(task.id)">Edit</button>
-            <button class="btn btn-info" routerLink="/task-details" (click)="viewTask()">View</button>
-            <button class="btn btn-danger" (click)="deleteTask()">Delete</button>
+            <button class="btn btn-primary me-2" routerLink="/edit-task" (click)="editTask(task.id)">Edit</button>
+            <button class="btn btn-info me-2" routerLink="/task-details" (click)="viewTask(task.id)">View</button>
+            <button class="btn btn-danger" (click)="deleteTask(task,i)">Delete</button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
+</div>

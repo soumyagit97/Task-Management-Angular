@@ -1,0 +1,21 @@
+.button{
+    float: right;
+}
+.btn-right{
+    float: right;
+}
+.new-req-btn{
+    justify-content: flex-end;
+    
+}
+.d-flex {
+    justify-content: space-between;
+}
+  
+.content-heading-with-button,
+.new-req-btn {
+    margin: 10px;
+}
+.new-req-btn button {
+    margin: 0;
+}
