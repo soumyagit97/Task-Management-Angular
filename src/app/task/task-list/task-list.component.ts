@@ -44,7 +44,10 @@ export class TaskListComponent implements OnInit {
       queryParams: { id: id },
     });
   }
-  viewTask(){
+  viewTask(id:number){
+    this.router.navigate(['/task-details'], {
+      queryParams: { id: id },
+    });
 
   }
   deleteTask(task:any,index: number){

@@ -90,7 +90,7 @@ export class EditTaskComponent implements OnInit {
      "status": this.editForm.get("formcontrolstatus")?.value,
      "duedate": this.editForm.get("formcontrolduedate")?.value,
     }
-    if (localStorage.getItem("taskList") !== null) {
+    if ( this.confirmSubmitted && this.editForm.valid && localStorage.getItem("taskList") !== null) {
       try {
     //lets find the index where obj is present 
     let tmpTasklist:any=localStorage.getItem("taskList");

@@ -1,0 +1,6 @@
+.register {
+    padding: 10px;
+  }
+  .breadcrumb-item{
+    text-decoration: none !important;
+  }
